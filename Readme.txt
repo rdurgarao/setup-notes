@@ -59,3 +59,32 @@ $ > git push ( pushes the local code to remote url ) - Some login permissions
 
 Git area
 OS -> Git staged area -> Git commit area -> Cloud
+
+
+HTML
+-------
+Why we need HTML?
+
+1980 -> 1990’s
+
+Writing softwares for their own usage, 
+example for messaging one person to other person
+Example -> virus software 
+
+
+1980s
+Flight bookings -> 
+	A company can build software and share to their passengers to book the tickets
+
+1990’s	
+Browser -> software that can come up with some common goals for building software 
+As a customer, I need to install a single software, but I will get all services 
+
+W3C organization
+Common standards for application development 
+
+Plain Text 
+HTML <- Hyper text markup language (headings, para, images, anchor, …)
+CSS <- More advanced styling for web pages
+
+web Document or web page or web application
