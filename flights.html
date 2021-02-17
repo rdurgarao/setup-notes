@@ -1,39 +1,155 @@
 <html>
-    <head>
-        <title>My first HTML Document</title>
 
-        <link rel="shortcut icon" href="https://code.visualstudio.com/favicon.ico" type="image/x-icon"> 
-        <meta name="keywords" content="flights in india, international, Qatar, Germany, Towards india" />
+<head>
+    <title>My first HTML Document</title>
 
-        <style>
-            h2 {
-                color: green;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h2>Learning HTML</h2>
-        </header>
+    <link rel="shortcut icon" href="https://code.visualstudio.com/favicon.ico" type="image/x-icon">
+    <meta name="keywords" content="flights in india, international, Qatar, Germany, Towards india" />
 
-        <ol>
-            <li>
-                Understanding about browser
-            </li>
-            <li>
-                Why we need HTML?
-            </li>
-            <li>
-                Reading the HTML Tags
-            </li>
-        </ol>
+    <style>
+        h2 {
+            color: green;
+        }
 
-        <address>
-            Block D, South Bay Street, Los Angeles, CA
-        </address>
+        /* .highlight {
+                background-color: red;
+            } */
+    </style>
+</head>
 
-        <footer>
-            <p>https://developer.mozilla.org/en-US/docs/Web/HTML/Element#main_root</p>
-        </footer>
-    </body>
+<body>
+    <header>
+        <h2 class="highlight">
+            Learning HTML
+        </h2>
+    </header>
+
+    <ol>
+        <li class='highlight'>
+            Understanding about browser
+        </li>
+        <li>
+            Why we need HTML?
+        </li>
+        <li class='highlight'>
+            Reading the HTML Tags
+        </li>
+    </ol>
+
+    <a href="./book_ticket.html"><Button>Book</Button></a>
+    <table border="4" cellpadding="10" cellspacing="5">
+        <thead>
+            <tr>
+                <th>
+                    Service No
+                </th>
+                <th>
+                    From
+                </th>
+                <th>
+                    To
+                </th>
+                <th>
+                    Departure
+                </th>
+                <th>
+                    Counter no
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    A567
+                </td>
+                <td>
+                    Los Angeles
+                    <table border="1">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    California
+                                </td>
+                                <td>
+                                    South Bay
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <a href="Readme.txt">San fransisco</a>
+                </td>
+                <td>
+                    23:30
+                </td>
+                <td>
+                    G4
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    C70 
+                    (
+                        <img src="./images/pg_admin.png" title="database" height="30" width="auto" />
+                    )
+                </td>
+                <td>
+                    NYC
+                </td>
+                <td>
+                    PNS
+                </td>
+                <td>
+                    22:30
+                </td>
+                <td>
+                    B2
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Example for content tags (h1..h6, p, a, li,...) -->
+    <address>
+        Block D, South Bay Street,
+
+        <!-- Example for self ending tags (br, img, hr, ...) -->
+        <br />
+        Los Angeles, CA
+        <hr />
+    </address>
+
+    <footer>
+        <p>
+            <img src="./images/pg_admin.png" title="database" height="30" width="auto" />
+            <br />
+            <b>
+                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#main_root">
+                    https://developer.mozilla.org/en-US/docs/Web/HTML/Element#main_root
+                </a>
+            </b>
+        </p>
+
+
+        <section>
+            Copyrighted by
+            <span style="color: gray;">
+                flights
+            </span>
+            services operated in punjab
+        </section>
+
+        <div>
+            Flight service has
+            <a href="http://google.com/legal">
+                legal
+            </a>
+            option to cancel services at any point of time
+        </div>
+
+        <div>Passengers should collect the onboarding passes on the respective counter from Airport authority</div>
+    </footer>
+</body>
+
 </html>
