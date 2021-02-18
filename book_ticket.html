@@ -27,22 +27,52 @@
     </header>
 
     <div>
-        <form>
-            <label>
+        <!-- http verbs - get, post, put, delete -->
+        <form action="http://google.com/book_ticket.php" method="post">
+            <label for="first_name">
                 First Name
             </label>
-            <input />
+            <input id="first_name" name="first_name" disabled value="durga" placeholder="Enter name"/>
             <br/>
             <label>
                 Last Name
             </label>
-            <input />
+            <input type="text" name="last_name"/>
             <br/>
             <label>
                 Identity
             </label>
-            <input type="radio" name="identity"/> Local
-            <input type="radio" name="identity"/> Non Local
+            <input type="radio" name="identity" value="local"/> Local
+            <input type="radio" checked name="identity" value="non-local"/> Non Local
+            <br/>
+            <label>
+                Timings
+            </label>
+            <input type="checkbox" checked name="timings[value]" value="9-10"> 9am to 10 am
+            <input type="checkbox" name="timings[value]" value="10-11"> 10am to 11 am
+            <br/>
+            <label for="select_city">
+                Select City
+            </label>
+            <select id="select_city" name="select_city">
+                <option value="">Select</option>
+                <option value="new_jersey" selected>New Jersey</option>
+                <option value="washington">Washington</option>
+            </select>
+            <br/>
+            <label>
+                Attach documents
+            </label>
+            <input type="file" name="verify-document" accept="image/*"/>
+            <br/>
+            <textarea rows=10 cols=50 >
+            </textarea>
+            <br/>
+            <input type="date" />
+            <input type="color" />
+            <input type="email" />
+            <input type="password" />
+            <input type="submit" value="Book" />
         </form>
     </div>
 
@@ -57,6 +87,37 @@
         </section>
 
     </footer>
+
+    <!-- <iframe height="500" width="500" src="https://www.w3docs.com/snippets/html/how-to-allow-the-file-input-type-to-accept-only-image-files.html">
+
+    </iframe> -->
+
+    
+
+    <pre>
+        # Simple for loop using a range.
+            for i in (1..4)
+                print i," "
+            end
+            print "\n"
+
+            for i in (1...4)
+                print i," "
+            end
+            print "\n"
+
+            # Running through a list (which is what they do).
+            items = [ 'Mark', 12, 'goobers', 18.45 ]
+            for it in items
+                print it, " "
+            end
+            print "\n"
+
+            # Go through the legal subscript values of an array.
+            for i in (0...items.length)
+                print items[0..i].join(" "), "\n"
+            end
+    </pre>
 </body>
 
 </html>
