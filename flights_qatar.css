@@ -1,0 +1,43 @@
+
+body {
+    background-color: lightgrey;
+}
+
+html body { 
+    color: black;
+    background-color: skyblue;
+}
+
+
+h2 {
+    color: #5c5c5c;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+tr td {
+    color: white;
+}
+
+tr th {
+    color: goldenrod
+}
+
+p.strong {
+    color: #00F;
+}
+
+/* score - 100 */
+#why-need-html {
+    color: red !important;
+}
+
+/* score - 11 */
+html .highlight {
+    color: lightyellow;
+}
+
+/* score - 110 */
+#why-need-html.highlight {
+    color: lightgreen;
+}

@@ -6,15 +6,37 @@
     <link rel="shortcut icon" href="https://code.visualstudio.com/favicon.ico" type="image/x-icon">
     <meta name="keywords" content="flights in india, international, Qatar, Germany, Towards india" />
 
-    <style>
+    <link href="./flights.css" rel="stylesheet"/>
+    <!-- <style>
         h2 {
             color: green;
         }
 
-        /* .highlight {
-                background-color: red;
-            } */
-    </style>
+        tr td {
+            color: white;
+        }
+
+        tr th {
+            color: goldenrod
+        }
+
+        p {
+            color: #00F;
+        }
+
+        #why-need-html {
+            color: red;
+        }
+
+        /* h2.highlight { */
+        ol > li, h2.highlight, ol #why-need-html{
+            background-color: lightgoldenrodyellow;
+        }
+
+        /* h2.highlight {
+            background-color: lightgoldenrodyellow;
+        } */
+    </style> -->
 </head>
 
 <body bgcolor="skyblue">
@@ -28,7 +50,7 @@
         <li class='highlight'>
             Understanding about browser
         </li>
-        <li>
+        <li id="why-need-html" class="highlight" style="color: black;">
             Why we need HTML?
         </li>
         <li class='highlight'>
@@ -37,9 +59,9 @@
     </ol>
 
     <a href="./book_ticket.html"><Button>Book</Button></a>
-    <table border="4" cellpadding="10" cellspacing="5">
+    <table border="4" cellpadding="10" cellspacing="5" style="background-color: ghostwhite;">
         <thead>
-            <tr>
+            <tr style="background-color: lightgray;">
                 <th>
                     Service No
                 </th>
@@ -58,7 +80,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr style="background-color: lightseagreen;">
                 <td>
                     A567
                 </td>
@@ -87,14 +109,15 @@
                     G4
                 </td>
             </tr>
-            <tr>
-                <td>
+            <tr style="background-color: lightpink; font-weight: bold; color: red">
+                <td> 
+                    <!-- color: red (inherit from parent ) - low, tr td (color: white) -->
                     C70 
                     (
                         <img src="./images/pg_admin.png" title="database" height="30" width="auto" />
                     )
                 </td>
-                <td>
+                <td style="font-style: italic;">
                     NYC
                 </td>
                 <td>
@@ -159,6 +182,7 @@
             option to cancel services at any point of time
         </div>
 
+        <p>* note - changes are not affected on or before 2020 bookings</p>
         <div>Passengers should collect the onboarding passes on the respective counter from Airport authority</div>
     </footer>
 </body>
