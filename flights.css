@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Source Sans Premium';
+    src: url(./fonts/Source_Sans_Pro/SourceSansPro-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Source Sans Premium';
+    src: url(./fonts/Source_Sans_Pro/SourceSansPro-Light.ttf);
+    font-weight: 200;
+}
 
 body {
     background-color: lightcoral;
@@ -8,6 +18,33 @@ html body {
     background-color: skyblue;
 }
 
+.food-items-wrapper{
+    background-color: lightpink;
+    height: 300px;
+    width: 300px;
+
+    background-image: url(./assets/images/food-items.svg);
+    background-repeat: no-repeat;
+    background-size: 300px;
+}
+
+img#food-items {
+    background-size: 200px;
+}
+
+.article {
+    border: 1px solid gray;
+}
+
+.article .title {
+    font-size: 1.5em;
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+}
+
+.article .description {
+    font-size: 12px;
+}
 
 h2 {
     color: #5c5c5c;
