@@ -44,3 +44,10 @@ Display
 Bootstrap framework 
 
 
+HTML/ Css Assessment 1
+- Create an Registration form with proper input fields, on submit It will take to 
+welcome page 
+- Include FAQ links 
+- Include help link
+- Include copyright text in footer with company logo and contact form
+- Add menu options (link to welcome page, registration page, faq, help)
