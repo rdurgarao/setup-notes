@@ -10,7 +10,7 @@ External Stylesheets
 
 
 Specificity factor Index
-Pseudo elements - 1 (10^0)
+Pseudo elements - 1 (10^0) - X
 Tag - 1 (10^0)
 Class - 10 (10^1)
 Id - 100 (10^2)
@@ -27,18 +27,24 @@ Styling
 	text formating (typography)
 	Icons
 	
-Positioning 
-	position 
-	top	
-	left
-	float 
-
 Spacing 
 	padding 
 	margin
-	border
+	border	
+
+Positioning 
+	position: fixed | absolute | relative | .... sticky, static | 
+	top: 10px
+	left
+	bottom
+	right
+	float 
+
 
 Display 
+	none - not visible in page 
+	block - visible in page 
+	inline-block - inline (stacked horizontally)
 	
 
 Bootstrap framework 

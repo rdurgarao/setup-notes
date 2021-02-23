@@ -5,6 +5,7 @@
 
     <link rel="shortcut icon" href="https://code.visualstudio.com/favicon.ico" type="image/x-icon">
     <meta name="keywords" content="flights in india, international, Qatar, Germany, Towards india" />
+    <link href="./main.css" rel="stylesheet" />
 
     <style>
         h2 {
@@ -21,10 +22,11 @@
     <header>
         <h2 class="highlight">
             Learning HTML
+            <!-- <a class="book-btn" href="./book_ticket.html"><Button>Book</Button></a> -->
         </h2>
     </header>
 
-    <ol>
+    <ol id="bullet-points">
         <li class='highlight'>
             Understanding about browser
         </li>
@@ -36,7 +38,11 @@
         </li>
     </ol>
 
-    <a href="./book_ticket.html"><Button>Book</Button></a>
+    <div class="box">
+        <div class="circle"></div>
+    </div>
+
+    <a class="book-btn" href="./book_ticket.html"><Button>Book</Button></a>
     <table border="4" cellpadding="10" cellspacing="5">
         <thead>
             <tr>
@@ -112,6 +118,7 @@
 
     <!-- Example for content tags (h1..h6, p, a, li,...) -->
     <address>
+        <span class="close-footer">X</span>
         Block D, South Bay Street,
 
         <!-- Example for self ending tags (br, img, hr, ...) -->
@@ -161,6 +168,63 @@
 
         <div>Passengers should collect the onboarding passes on the respective counter from Airport authority</div>
     </footer>
+
+    <pre>
+        HTML
+            For layout purpose, few styles 
+
+            CSS ( cascading stylesheets )
+
+            Types of Representing CSS
+            Inline style
+            Internal Stylesheet <!-- ( <style> selection criteria </style>) -->
+            External Stylesheets 
+
+
+            Specificity factor Index
+            Pseudo elements - 1 (10^0) - X
+            Tag - 1 (10^0)
+            Class - 10 (10^1)
+            Id - 100 (10^2)
+            Inline style - 1000 (10^3)
+            
+            h2 .highlight 	(CSS Selector 1 + 10 = 11 ) 	 	
+            .highlight (score - 10)
+            h2 span .highlight ( score - 12)
+
+
+            Different type of css properties
+            Styling 
+                colors 
+                text formating (typography)
+                Icons
+                
+            Spacing 
+                padding 
+                margin
+                border	
+
+            Positioning 
+                position 
+                top	
+                left
+                float 
+
+
+            Display 
+                
+
+            Bootstrap framework 
+
+
+            HTML/ Css Assessment 1
+            - Create an Registration form with proper input fields, on submit It will take to 
+            welcome page 
+            - Include FAQ links 
+            - Include help link
+            - Include copyright text in footer with company logo and contact form
+            - Add menu options (link to welcome page, registration page, faq, help)
+    </pre>
 </body>
 
 </html>
