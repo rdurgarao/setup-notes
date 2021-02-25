@@ -41,3 +41,8 @@ html .highlight {
 #why-need-html.highlight {
     color: lightgreen;
 }
+
+input:focus {
+    /* border: 1px solid blue; */
+    background-color: antiquewhite;
+}

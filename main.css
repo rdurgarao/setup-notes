@@ -1,3 +1,7 @@
+body {
+    background-color: skyblue;
+}
+
 address {
     border: 1px solid black;
     margin: 20px;
@@ -26,6 +30,11 @@ address {
     /* top: 10px; */
     bottom: 10px;
     /* right: 20px; */
+}
+
+.book-btn button:hover{
+    /* score - 11 (psuedo element - 1 + 10 ) */
+    background-color: blue;
 }
 
 header{
@@ -60,7 +69,27 @@ header{
     right: 100px;
     /* display: none; */
 }
+/* 
+ul li {
+    text-decoration: none;
+} */
 
-ol li{
-    /* display: inline-block; */
+ul li::after , ul li::before{
+    content: '. ';
+    background-image: url(./assets/images/food-items.svg);
+    color: white;
+    height: 20px;
+    width: 20px;
+    background-size: 20px;
 }
+
+#login_form{
+    width: 500px;
+}
+
+ /* tablet */
+@media (min-width: 576px) and (max-width: 700px) {
+    body {
+        background-color: yellow;
+    }
+ }

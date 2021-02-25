@@ -47,8 +47,21 @@ Display
 	inline-block - inline (stacked horizontally)
 	
 
-Bootstrap framework 
+Pseudo elements (::hover, ::focus, ::after) - 1 (10^0)
+&&
+Bootstrap framework ( CSS & JS )
+@media in css
+ng-bootstrap framework ( CSS & Angular )
 
+Bootstrap 
+- Fonts 
+- Content 
+- Form 
+- Continer 
+- Grid 
+- Components 
+
+Bootstap (Grid - *)
 
 HTML/ Css Assessment 1
 - Create an Registration form with proper input fields, on submit It will take to 
