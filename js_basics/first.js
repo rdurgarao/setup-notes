@@ -87,3 +87,88 @@ for(var index = 0; index < names.length; index++){
 
 // var prices = [300, 500, 800, 700, 100]
 // 240 + 500 + 640 + 700 + 80 = 2160 (240)
+
+// function or methods or actions ..
+
+function printList(pattern){
+    if(pattern == undefined){
+        pattern = "##########";
+    }
+    console.log("1. Get plan for weekly calls");
+    console.log("2. Plan for recording the meeting notes");
+    console.log("3. " + pattern);
+}
+
+printList(" --- *** ----");
+printList(" ============ ");
+printList();
+
+function calcAge(currentAge, since) {
+    return currentAge + since;
+}
+
+
+var fiveYearsAgoAge = calcAge(25, -5);  
+var firstYearGrudationMyAge = calcAge(20, -3);  
+var endOfGraduationAge = calcAge(firstYearGrudationMyAge, 4);   
+
+console.log(fiveYearsAgoAge, firstYearGrudationMyAge, endOfGraduationAge);
+
+var numbers = [2,3,4,6,8];
+
+var evenNumbers = numbers.filter(function(number) {
+    return number % 2 == 0;
+});
+
+var nextOddNumbers = evenNumbers.map(function(number){
+    return number + 1;
+});
+
+evenNumbers.forEach(function(number){
+    console.log(number, '::::');
+});
+
+console.log(evenNumbers, '===');
+console.log(nextOddNumbers, '===');
+
+
+function Student(){
+    this.name = '';
+    this.department = '';
+    this.subjects = [];
+    this.registerSubject = function(){
+        if(this.department == 'computers'){
+            this.subjects = ['html', 'css', 'js'];
+        } else {
+            this.subjects = ['NA'];
+        }
+    };
+    this.getSubjects = function(){
+        return this.subjects;
+    }
+}
+
+Student.prototype.printFullName = function (){
+    return this.name.toUpperCase();
+}
+
+var s1 = new Student(); // object
+s1.name = 'Satish';
+s1.department = "computers";
+s1.registerSubject();
+
+
+console.log(s1, s1.subjects, '^^^^^^^^^');
+
+var s2 = new Student();
+s2.name = 'Mahesh';
+s2.department = "electronics";
+s2.registerSubject();
+
+console.log(s2, '^^^^^^^^^');
+
+console.log(s1.printFullName());
+
+
+// Consider billing system , print each bill from customer and tell me the total bills
+// till present
