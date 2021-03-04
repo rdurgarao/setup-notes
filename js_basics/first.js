@@ -172,3 +172,80 @@ console.log(s1.printFullName());
 
 // Consider billing system , print each bill from customer and tell me the total bills
 // till present
+
+// Billing system 
+//     - no_of_bills_till_date = []
+//     - printEntireTotal()
+
+// Bill 
+//     - items []
+//     - total price - num 
+
+//     - printBill()
+//     - addItem(name, price)
+
+// Item 
+//     - name 
+//     - price 
+
+function Bill(){
+    this.items = [];
+    this.totalPrice = 0;
+
+    this.printBill = function(){
+        for(var index = 0; index < this.items.length; index++){
+            var item = this.items[index];
+            console.log(item[0], '=====', item[1]);
+        }
+
+        var sum = 0;
+        this.items.forEach(function(item){
+            sum = sum + item[1];
+        });
+
+        this.totalPrice = sum;
+        console.log("Total", "=====", sum);
+    }
+
+    this.addItem = function(name, price){
+        var item = [name, price]; 
+        this.items.push(item);
+    }
+}
+
+function BillingSystem(){
+    this.no_of_bills_till_date = [];
+
+    this.addBill = function(bill){
+        this.no_of_bills_till_date.push(bill);
+    }
+
+    this.printTotal = function() {
+        var sum = 0;
+
+        for(var index = 0; index < this.no_of_bills_till_date.length; index++){
+            var bill = this.no_of_bills_till_date[index];
+
+            sum = sum + bill.totalPrice;
+        }
+
+        console.log("Total Bills Amount", "====", sum);
+    }
+}
+
+var bs = new BillingSystem();
+bs.printTotal();
+
+var bill1 = new Bill();
+bill1.addItem('Apples', 400);
+bill1.addItem('Oranges', 600);
+bill1.printBill();
+
+var bill2 = new Bill();
+bill2.addItem('Grapes', 100);
+bill2.addItem('Papaya', 700);
+bill2.printBill();
+
+bs.addBill(bill1);
+bs.addBill(bill2);
+bs.printTotal();
