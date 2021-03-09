@@ -249,3 +249,197 @@ bill2.printBill();
 bs.addBill(bill1);
 bs.addBill(bill2);
 bs.printTotal();
+
+// JSON
+var bills = [
+    {
+        items: [['apples', 300], ['mangos', 200]],
+        totalPrice: 500
+    }, 
+    {
+        items: [['apples', 400]],
+        totalPrice: 400
+    }
+]
+
+var school = {
+    name: 'MST',
+    address: {
+        street: '#232, South Walley',
+        city: 'Hyderabad',
+        state: 'Telangana',
+        zip: 500002
+    }
+}
+
+school.name = 'GTS';
+school.address.zip = 5000023;
+console.log(school, '####')
+
+// School -> Address
+
+function School(name){
+    this.name = name;
+    this.address = null;
+
+    this.setAddress = function(address){
+        if(!address){
+            throw 'Address is mandatory';
+        }
+
+        this.address = address;
+    }
+
+    this.print = function(){
+        console.log(this);
+    }
+    
+    this.changeCity = function(newName) {
+        this.address.city = newName;
+    }
+}
+
+function Address(){
+    this.street = null;
+    this.city = null;
+    this.state = null;
+    this.zip = null;
+
+    this.set = function(street, city, state, zip){
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+    }
+}
+
+var address = new Address();
+address.set('South Walley', 'Hyd', 'Tel', 500001);
+console.log(address);
+
+var mstSchool = new School('MST');
+mstSchool.setAddress(address);
+
+var emptyAddress = new Address();
+emptyAddress.set('', '', '', 0);
+
+try{
+    mstSchool.setAddress();
+} catch(e){
+    mstSchool.setAddress(emptyAddress);
+    console.log(e, '???');
+}
+
+mstSchool.print();
+
+var gtsSchool = new School('GTS');
+gtsSchool.setAddress(address);
+
+// console.log(mstSchool);
+mstSchool.print();
+
+// address.city = 'Secunderabad';
+// mstSchool.changeCity('MST CITY');
+
+mstSchool.print();
+gtsSchool.print();
+
+
+// Write a JS program to print fibonaci numbers from 500 to 800?
+// Write a JS program to print prime numbers from 500 to 800?
+// Write a JS program to read number and print the text version of number?
+// 1 -> One 
+// 23 -> twenty three 
+// 800 -> eight hundred 
+// 40 -> fourty 
+
+// 0 1 1 2 3 5 8 13 
+function fibonaci(){
+    var initialValue = 0;
+    var currentValue  = 1;
+    var result;
+
+    // console.log(initialValue);
+    // console.log(currentValue);
+
+    for(var index = 0; index < 1000; index++){
+        result = currentValue + initialValue;
+        initialValue = currentValue;
+        currentValue = result;
+
+        if(result >=5 && result <=1000){
+            console.log(result, '???');
+        }
+
+        if(result >= 1000){
+            break;
+        }
+    }
+}
+
+fibonaci();
+
+
+var step = 0;
+function printNumbers(){
+    step++;
+
+    if(step > 5){
+        throw 'Exceed max limits';
+    }
+
+    console.log(step, '??');
+    printNumbers();
+}
+
+// printNumbers();
+
+var cart1 = {
+    items: [
+        {name: 'apple', quantity: 5, item_price: 20, total: 100},
+        {name: 'mango', quantity: 10, item_price: 10, total: 100}
+    ],
+    total_price: 200
+};
+
+cart1['items'][0]['total'] = 300;
+
+var cart2 = {
+    items: [
+        {name: 'apple', quantity: 5, item_price: 5, total: 25},
+        {name: 'mango', quantity: 10, item_price: 10, total: 100}
+    ],
+    total_price: 125
+};
+
+function getDiscountPrice(cart, discountValue = 10){
+    return cart['total_price'] * (discountValue / 100);
+}
+
+function getMeFirstItemInCart(cart){
+    return cart['items'][0];
+}
+
+console.log(getDiscountPrice(cart1));
+console.log(getDiscountPrice(cart2));
+
+var cart1FirstItem = getMeFirstItemInCart(cart1);
+console.log(cart1FirstItem);
+
+function itemsInCart(cart){
+    var items = cart['items'];
+
+    for(var index = 0; index < items.length; index++){
+        console.log(items[index].name + '==>' + items[index].quantity + '*' + items[index].item_price + '=' + items[index].total);
+    }
+
+    console.log(getDiscountPrice(cart));
+}
+
+itemsInCart(cart1);
+
+
+// Regular Expression
+var regexObj = new RegExp('\d');
+
+console.log(regexObj.test('sadsad'), '????')
