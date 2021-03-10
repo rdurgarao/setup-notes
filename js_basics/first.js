@@ -443,3 +443,102 @@ itemsInCart(cart1);
 var regexObj = new RegExp('\d');
 
 console.log(regexObj.test('sadsad'), '????')
+
+
+// Asynchronous programming 
+// - 2 predefined functions - setTimeout & setInterval
+
+// setTimeout(function(){
+//     for(var index = 100; index < 500; index++){
+//         console.log(index);
+//     }    
+// }, 1);
+
+// for(var index = 1000; index < 2000; index++){
+//     console.log(index);
+// }
+
+// promises -> Asynchronous
+async function checkOddness(){
+    var num = 6;
+
+    var numPromise = new Promise(function(resolve, reject){
+        if(num % 2 == 0){
+            setTimeout(function(){
+                resolve(num);
+            }, 5000);
+        } else {
+            setTimeout(function(){
+                reject('Its odd number');
+            }, 5000);
+        }
+    });    
+
+    var result = await numPromise;
+    return result;
+}
+
+// var numPromise = checkOddness;
+// numPromise.then(function(data){
+//     console.log(data);
+// }).catch(function(err){
+//     console.log(err);
+// });
+
+// Convert asynch to synchronous
+// - 2 keywords - asynch and await 
+
+async function execution(){
+    const result = await checkOddness();
+
+    console.log(result);
+    console.log('-- end of asynch ---');    
+}
+
+execution();
+
+// Design patterns
+// - Constructional (singleton, factory)
+// - Behavioral - proxy 
+// - Structural - observable
+
+// Callback pattern 
+function multiply(printResultFn, a, b){
+    printResultFn(a * b);
+}
+
+multiply(function(result){
+    console.log(result)
+},2,5);
+
+// chain of responsibility pattern
+function print(){
+
+    this.hash = function(){
+        console.log('######');
+        return this;
+    }
+
+    this.percentile = function(){
+        console.log('%%%%%%');
+        return this;
+    }
+}
+
+var printerObj = new print();
+
+printerObj.hash().percentile().hash().percentile();
+
+
+// Prototype pattern 
+Array.prototype.calc = function(){
+    var result = 1;
+
+    for(var index = 0; index < this.length; index++){
+        result = result * this[index];
+    }
+
+    return result;
+}
+
+[1,2,3].calc();     // 6
