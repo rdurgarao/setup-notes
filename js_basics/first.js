@@ -541,4 +541,4 @@ Array.prototype.calc = function(){
     return result;
 }
 
-[1,2,3].calc();     // 6
+// [1,2,3].calc();     // 6
