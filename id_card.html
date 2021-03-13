@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <style>
+        #frontside,
+        #backside {
+            width: 250px;
+            height: 350px;
+            border: 1px solid green;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        #card_preview {
+            display: inline-flex;
+        }
+
+        #frontside img {
+            height: 150px;
+            width: 150px;
+            margin-bottom: 30px;
+        }
+
+        #frontside-wrapper,
+        #backside-wrapper {
+            padding: 30px;
+        }
+
+        #frontside-wrapper div {
+            margin-bottom: 10px;
+        }
+
+        #card_holder_org_name {
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+
+    <script src="./js_basics/id_card.js"></script>
+</head>
+
+<body>
+
+    <form onsubmit="return submitIDCardDetails()">
+        <hr/>
+        Styles 
+        <br/>
+        Choose color 
+        <input type="color" name="color_selection"/>
+        <hr />
+        Frontside Information
+        <div class="inp-group">
+            <label>Face Photo</label>
+            <input type="file" id="photo" name="card_holder_photo" accept="*.jpeg" />
+        </div>
+        <div class="inp-group">
+            <label>Name</label>
+            <input placeholder="enter name" name="card_holder_name" />
+        </div>
+        <div class="inp-group">
+            <label>Contact Phone</label>
+            <input placeholder="enter primary contact" name="card_holder_phone" />
+        </div>
+        <div class="inp-group">
+            <label>Blood Group</label>
+            <input type="radio" name="blood_group" value="A+" /> A+
+            <input type="radio" name="blood_group" value="A-" /> A-
+            <input type="radio" name="blood_group" value="B+" /> B+
+            <input type="radio" name="blood_group" value="B-" /> B-
+            <input type="radio" name="blood_group" value="AB+" /> AB+
+            <input type="radio" name="blood_group" value="AB-" /> AB-
+            <input type="radio" name="blood_group" value="O+" /> O+
+            <input type="radio" name="blood_group" value="O-" /> O-
+            <input type="radio" name="blood_group" value="N/A" /> N/A
+        </div>
+        <div class="inp-group">
+            <label>Enter Address</label>
+            <textarea placeholder="enter address" name="card_holder_address"></textarea>
+        </div>
+
+        <hr />
+        Backside information
+        <div class="inp-group">
+            <label>Org Name</label>
+            <input placeholder="enter org name" name="card_holder_org_name" />
+        </div>
+
+        <div class="inp-group">
+            <label>Enter Org Address</label>
+            <textarea placeholder="enter org address" name="card_holder_org_address"></textarea>
+        </div>
+
+        <hr />
+
+        <input type="submit" value="print" />
+    </form>
+
+    <div id="card_details" class="hide">
+        <div id="card_preview">
+            <div id="frontside">
+                <div id="frontside-wrapper">
+                    <img id="card_holder_photo" src="" />
+                    <div id="card_holder_name">Durga</div>
+                    <div id="card_holder_blood_group">A+</div>
+                    <div id="card_holder_phone">(+91) 97009 13097</div>
+                    <div id="card_holder_address">#252, South Walley, Texas</div>
+                </div>
+            </div>
+
+            <div id="backside">
+                <div id="backside-wrapper">
+                    <div id="card_holder_org_name">CONST</div>
+                    <div id="card_holder_org_address">#2-34, CTST Building, Samuils Street, UK</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
