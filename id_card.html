@@ -40,11 +40,20 @@
         }
     </style>
 
+<!-- jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"></script>
+
     <script src="./js_basics/id_card.js"></script>
 </head>
 
 <body>
 
+    <div id="errors">
+
+    </div>
     <form onsubmit="return submitIDCardDetails()">
         <hr/>
         Styles 
@@ -52,10 +61,11 @@
         Choose color 
         <input type="color" name="color_selection"/>
         <hr />
-        Frontside Information
+        <h2>Frontside Information</h2>
         <div class="inp-group">
             <label>Face Photo</label>
             <input type="file" id="photo" name="card_holder_photo" accept="*.jpeg" />
+            <small id="pic_validation_error" style="display: none;">Pic is required</small>
         </div>
         <div class="inp-group">
             <label>Name</label>
@@ -83,7 +93,7 @@
         </div>
 
         <hr />
-        Backside information
+        <h2>Backside information</h2>
         <div class="inp-group">
             <label>Org Name</label>
             <input placeholder="enter org name" name="card_holder_org_name" />
