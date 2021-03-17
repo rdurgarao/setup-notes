@@ -81,7 +81,68 @@ $(document).ready(function(){
                 currentEle.attr('style', 'color: red;');
             }
         });
-    })
+    });
+
+    $('#fetchAuthors').click(function(ev){
+        ev.stopPropagation();
+        ev.preventDefault();
+
+        // var xhttp = new XMLHttpRequest();
+        // xhttp.onreadystatechange = function () {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         // Typical action to be performed when the document is ready:
+        //         var response = JSON.parse(xhttp.responseText);
+
+        //         var tbody = $('<tbody></tbody>');
+        //         response.authors.forEach(function(author) {
+        //             var td1 = $('<td></td>');
+        //             td1.html(author.name);
+
+        //             var td2 = $('<td></td>');
+        //             td2.html(author.biography);
+
+        //             var tr = $('<tr></tr>');
+        //             // debugger;
+        //             tr.append(td1);
+        //             tr.append(td2);
+        //             tbody.append(tr);
+        //         });
+
+        //         $('#authors table').append(tbody);
+        //         // document.getElementById("demo").innerHTML = xhttp.responseText;
+        //     }
+        // };
+        // xhttp.open("GET", "http://localhost:3000/authors", true);
+        // xhttp.send();
+
+
+        $.ajax('http://localhost:3000/authors', {
+            type: 'POST',
+            data: {login: 'test', password: 'test'},
+            success: function(data){
+                var tbody = $('<tbody></tbody>');
+                data.authors.forEach(function(author) {
+                    var td1 = $('<td></td>');
+                    td1.html(author.name);
+
+                    var td2 = $('<td></td>');
+                    td2.html(author.biography);
+
+                    var tr = $('<tr></tr>');
+                    // debugger;
+                    tr.append(td1);
+                    tr.append(td2);
+                    tbody.append(tr);
+                });
+
+                $('#authors tbody').remove();
+                $('#authors table').append(tbody);
+            }, 
+            error: function(err){
+                alert('error');
+            }
+        })
+    });
 })
 
 // HTTP Protocol
@@ -101,4 +162,10 @@ $(document).ready(function(){
 // Response 
 // Data 
 
+// Http Status
+// 1xx - information
+// 2xx - success 
+// 3xx - redirections 
+// 4xx - client side error
+// 5xx - server side error
 
